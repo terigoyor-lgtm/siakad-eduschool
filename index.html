@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2856a6" />
+  <title>Masuk Admin | SIAKAD Sekolah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="login-page">
+  <main class="login-shell">
+    <section class="login-art" aria-label="Informasi aplikasi">
+      <div class="brand brand-light"><span class="brand-mark"><span class="material-symbols-rounded">school</span></span><span>SIAKAD<span class="brand-sub">SEKOLAH</span></span></div>
+      <div class="login-art-copy">
+        <span class="eyebrow">SISTEM INFORMASI AKADEMIK</span>
+        <h1>Semua urusan akademik, lebih terarah.</h1>
+        <p>Kelola data siswa, kelas, guru, dan laporan akademik dalam satu dashboard yang rapi dan mudah digunakan.</p>
+      </div>
+      <div class="art-stat-row"><div class="art-stat"><strong>Terintegrasi</strong><span>Menu akademik</span></div><div class="art-stat"><strong>Responsif</strong><span>Desktop & mobile</span></div><div class="art-stat"><strong>Praktis</strong><span>Demo client-side</span></div></div>
+      <div class="login-orbit orbit-one"></div><div class="login-orbit orbit-two"></div>
+    </section>
+    <section class="login-form-panel">
+      <div class="mobile-brand brand"><span class="brand-mark"><span class="material-symbols-rounded">school</span></span><span>SIAKAD<span class="brand-sub">SEKOLAH</span></span></div>
+      <div class="login-form-wrap">
+        <div class="welcome-icon"><span class="material-symbols-rounded">lock_open</span></div>
+        <p class="eyebrow">ADMINISTRATOR</p>
+        <h2>Selamat datang kembali</h2>
+        <p class="muted">Masuk untuk melanjutkan ke panel administrasi.</p>
+        <form id="loginForm" class="form-stack" novalidate>
+          <label for="username">Username</label>
+          <div class="input-with-icon"><span class="material-symbols-rounded">person</span><input id="username" name="username" autocomplete="username" placeholder="Masukkan username" required value="admin" /></div>
+          <label for="password">Password</label>
+          <div class="input-with-icon"><span class="material-symbols-rounded">key</span><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Masukkan password" required value="admin123" /><button type="button" class="icon-button password-toggle" aria-label="Tampilkan password"><span class="material-symbols-rounded">visibility</span></button></div>
+          <p id="loginError" class="field-error" role="alert"></p>
+          <button type="submit" class="btn btn-primary btn-wide">Masuk ke Dashboard <span class="material-symbols-rounded">arrow_forward</span></button>
+        </form>
+        <div class="demo-credential"><span class="material-symbols-rounded">info</span><div><strong>Akun demo</strong><p>Username: <code>admin</code> · Password: <code>admin123</code></p></div></div>
+        <p class="login-footnote">Proyek pembelajaran Pemrograman Web 2 · Data contoh tersimpan lokal di browser.</p>
+      </div>
+    </section>
+  </main>
+  <script src="assets/js/login.js"></script>
+</body>
+</html>

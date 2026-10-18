@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#315fbd" />
+  <title>Form Data Siswa | SIAKAD Sekolah</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" aria-label="Navigasi utama">
+    <div class="sidebar-brand">
+      <a href="dashboard.html" class="brand"><span class="brand-mark"><span class="material-symbols-rounded">school</span></span><span>SIAKAD<span class="brand-sub">SEKOLAH</span></span></a>
+      <p class="school-caption">Sistem Informasi Akademik</p>
+    </div>
+    <nav class="side-nav">
+      <p class="nav-section-label">MENU UTAMA</p>
+      <a class="nav-link" href="dashboard.html"><span class="material-symbols-rounded">dashboard</span><span>Dashboard</span></a>
+<a class="nav-link" href="data-master.html"><span class="material-symbols-rounded">groups</span><span>Data Master Siswa</span></a>
+<a class="nav-link active" href="form.html"><span class="material-symbols-rounded">person_add</span><span>Tambah Siswa</span></a>
+<a class="nav-link" href="laporan.html"><span class="material-symbols-rounded">summarize</span><span>Laporan Akademik</span></a>
+      <p class="nav-section-label" style="margin-top:25px">PREFERENSI</p>
+      <a class="nav-link" href="laporan.html"><span class="material-symbols-rounded">analytics</span><span>Rekap & Analitik</span></a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="support-card"><strong>Mode demonstrasi</strong><p>Data disimpan lokal pada browser ini. Tidak terhubung ke server.</p><a class="btn btn-secondary" href="../README.md" target="_blank" rel="noopener">Panduan proyek <span class="material-symbols-rounded" style="font-size:15px">open_in_new</span></a></div>
+      <button class="nav-link nav-logout" type="button" data-logout><span class="material-symbols-rounded">logout</span><span>Keluar dari akun</span></button>
+    </div>
+  </aside>
+  <div class="sidebar-overlay"></div>
+  <main class="main-area">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-label="Buka menu"><span class="material-symbols-rounded">menu</span></button>
+        <div class="page-location"><span>Admin</span><span class="material-symbols-rounded" style="font-size:14px">chevron_right</span><strong>Tambah Siswa</strong></div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-date"><span class="material-symbols-rounded">calendar_today</span><span data-today></span></div>
+        <button class="icon-button" type="button" aria-label="Notifikasi" title="Notifikasi demo"><span class="material-symbols-rounded">notifications</span></button>
+        <div class="profile-area"><div class="profile-avatar">AD</div><div class="profile-meta"><strong data-admin-name>Administrator</strong><span>Admin Sekolah</span></div><span class="material-symbols-rounded" style="font-size:17px;color:#8792a4">expand_more</span></div>
+      </div>
+    </header>
+    <section class="content">
+<div class="page-heading"><div><p class="eyebrow">FORMULIR AKADEMIK</p><h1 id="formPageTitle">Tambah Data Siswa</h1><p id="formPageDescription">Lengkapi data di bawah ini. Kolom bertanda bintang wajib diisi.</p></div><div class="heading-actions"><a href="data-master.html" class="btn btn-secondary"><span class="material-symbols-rounded">arrow_back</span> Kembali ke Data Siswa</a></div></div>
+<div class="form-layout"><section class="card form-card"><div class="form-card-header"><div class="welcome-icon"><span class="material-symbols-rounded">badge</span></div><div><h2>Informasi Siswa</h2><p id="pageBreadcrumb">Data identitas dan akademik</p></div></div>
+<form id="studentForm" novalidate><div class="form-grid">
+  <div class="form-field"><label for="nis">Nomor Induk Siswa (NIS) <span class="required">*</span></label><input id="nis" name="nis" inputmode="numeric" maxlength="12" placeholder="Contoh: 2026011" required><span class="hint">Masukkan 4–12 digit angka dan pastikan unik.</span><span class="error-text" data-error-for="nis"></span></div>
+  <div class="form-field"><label for="name">Nama Lengkap <span class="required">*</span></label><input id="name" name="name" maxlength="80" placeholder="Nama sesuai data sekolah" required><span class="error-text" data-error-for="name"></span></div>
+  <div class="form-field"><label for="gender">Jenis Kelamin <span class="required">*</span></label><select id="gender" name="gender" required><option value="">Pilih jenis kelamin</option><option value="Laki-laki">Laki-laki</option><option value="Perempuan">Perempuan</option></select><span class="error-text" data-error-for="gender"></span></div>
+  <div class="form-field"><label for="className">Kelas <span class="required">*</span></label><select id="className" name="className" required><option value="">Pilih kelas</option></select><span class="error-text" data-error-for="className"></span></div>
+  <div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email" maxlength="120" placeholder="nama@contoh.sch.id"><span class="hint">Opsional, tetapi format harus benar jika diisi.</span><span class="error-text" data-error-for="email"></span></div>
+  <div class="form-field"><label for="phone">Nomor Telepon</label><input id="phone" name="phone" type="tel" maxlength="20" placeholder="08xxxxxxxxxx"><span class="error-text" data-error-for="phone"></span></div>
+  <div class="form-field"><label for="status">Status Siswa <span class="required">*</span></label><select id="status" name="status" required><option value="Aktif">Aktif</option><option value="Nonaktif">Nonaktif</option></select><span class="error-text" data-error-for="status"></span></div>
+  <div class="form-field"><label for="average">Nilai Rata-rata <span class="required">*</span></label><input id="average" name="average" type="number" min="0" max="100" step="0.1" placeholder="0–100" required><span class="hint">Nilai harus berada di antara 0 dan 100.</span><span class="error-text" data-error-for="average"></span></div>
+</div><div class="form-actions"><a href="data-master.html" class="btn btn-secondary" data-cancel-form>Batal</a><button class="btn btn-primary" type="submit"><span class="material-symbols-rounded">save</span> Simpan Data</button></div></form>
+</section><aside class="info-column"><article class="card info-card"><h3><span class="material-symbols-rounded" style="font-size:18px;vertical-align:middle;color:var(--primary);margin-right:5px">info</span> Petunjuk Pengisian</h3><p>Gunakan data contoh untuk demonstrasi kelas. Formulir ini hanya menyimpan data di browser, bukan di database sekolah.</p><ul class="info-checklist"><li><span class="material-symbols-rounded">check_circle</span><span>NIS tidak boleh sama dengan siswa lain.</span></li><li><span class="material-symbols-rounded">check_circle</span><span>Nama minimal terdiri dari 3 karakter.</span></li><li><span class="material-symbols-rounded">check_circle</span><span>Pastikan kelas dan status sudah dipilih.</span></li><li><span class="material-symbols-rounded">check_circle</span><span>Nilai rata-rata antara 0–100.</span></li></ul></article><article class="card info-card" style="margin-top:15px"><h3>Alur penyimpanan</h3><p>Isi formulir → validasi JavaScript → simpan ke <code>localStorage</code> → data langsung terlihat di halaman Data Master dan Laporan.</p></article></aside></div>
+</section>
+    <footer class="footer"><span>© 2026 <strong>SIAKAD Sekolah</strong> · Proyek Pemrograman Web 2</span><span>Versi demo 1.0.0 · Client-side only</span></footer>
+  </main>
+</div>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/student-form.js"></script>
+</body>
+</html>

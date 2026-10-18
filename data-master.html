@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#315fbd" />
+  <title>Data Master Siswa | SIAKAD Sekolah</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" aria-label="Navigasi utama">
+    <div class="sidebar-brand">
+      <a href="dashboard.html" class="brand"><span class="brand-mark"><span class="material-symbols-rounded">school</span></span><span>SIAKAD<span class="brand-sub">SEKOLAH</span></span></a>
+      <p class="school-caption">Sistem Informasi Akademik</p>
+    </div>
+    <nav class="side-nav">
+      <p class="nav-section-label">MENU UTAMA</p>
+      <a class="nav-link" href="dashboard.html"><span class="material-symbols-rounded">dashboard</span><span>Dashboard</span></a>
+<a class="nav-link active" href="data-master.html"><span class="material-symbols-rounded">groups</span><span>Data Master Siswa</span></a>
+<a class="nav-link" href="form.html"><span class="material-symbols-rounded">person_add</span><span>Tambah Siswa</span></a>
+<a class="nav-link" href="laporan.html"><span class="material-symbols-rounded">summarize</span><span>Laporan Akademik</span></a>
+      <p class="nav-section-label" style="margin-top:25px">PREFERENSI</p>
+      <a class="nav-link" href="laporan.html"><span class="material-symbols-rounded">analytics</span><span>Rekap & Analitik</span></a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="support-card"><strong>Mode demonstrasi</strong><p>Data disimpan lokal pada browser ini. Tidak terhubung ke server.</p><a class="btn btn-secondary" href="../README.md" target="_blank" rel="noopener">Panduan proyek <span class="material-symbols-rounded" style="font-size:15px">open_in_new</span></a></div>
+      <button class="nav-link nav-logout" type="button" data-logout><span class="material-symbols-rounded">logout</span><span>Keluar dari akun</span></button>
+    </div>
+  </aside>
+  <div class="sidebar-overlay"></div>
+  <main class="main-area">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-label="Buka menu"><span class="material-symbols-rounded">menu</span></button>
+        <div class="page-location"><span>Admin</span><span class="material-symbols-rounded" style="font-size:14px">chevron_right</span><strong>Data Master Siswa</strong></div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-date"><span class="material-symbols-rounded">calendar_today</span><span data-today></span></div>
+        <button class="icon-button" type="button" aria-label="Notifikasi" title="Notifikasi demo"><span class="material-symbols-rounded">notifications</span></button>
+        <div class="profile-area"><div class="profile-avatar">AD</div><div class="profile-meta"><strong data-admin-name>Administrator</strong><span>Admin Sekolah</span></div><span class="material-symbols-rounded" style="font-size:17px;color:#8792a4">expand_more</span></div>
+      </div>
+    </header>
+    <section class="content">
+<div class="page-heading"><div><p class="eyebrow">PENGELOLAAN DATA</p><h1>Data Master Siswa</h1><p>Kelola identitas dan status siswa. Perubahan tersimpan di browser yang sedang digunakan.</p></div><div class="heading-actions"><a class="btn btn-primary" href="form.html"><span class="material-symbols-rounded">add</span> Tambah Siswa</a></div></div>
+<div class="card">
+  <div class="toolbar"><div class="toolbar-left"><label class="search-field"><span class="material-symbols-rounded">search</span><input id="studentSearch" type="search" placeholder="Cari nama, NIS, kelas, email…" aria-label="Cari siswa"></label></div><div class="toolbar-right"><select id="classFilter" class="control-select" aria-label="Filter kelas"><option value="">Semua kelas</option></select><select id="statusFilter" class="control-select" aria-label="Filter status"><option value="">Semua status</option><option value="Aktif">Aktif</option><option value="Nonaktif">Nonaktif</option></select><button id="resetFilters" class="btn btn-secondary" type="button"><span class="material-symbols-rounded">restart_alt</span> Reset</button></div></div>
+  <div class="table-responsive"><table><thead><tr><th></th><th>Nama Siswa</th><th>NIS</th><th>Kelas</th><th>Jenis Kelamin</th><th>Status</th><th>Aksi</th></tr></thead><tbody id="studentRows"><tr><td colspan="7" class="empty-cell">Memuat data…</td></tr></tbody></table></div>
+  <div class="table-footer"><span id="recordCount">0 data siswa</span><span>Data demo · penyimpanan localStorage</span></div>
+</div>
+<div id="deleteModal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="deleteModalTitle"><div class="modal-card"><div class="modal-icon"><span class="material-symbols-rounded">delete_forever</span></div><h2 id="deleteModalTitle">Hapus data siswa?</h2><p>Anda akan menghapus data <strong id="deleteStudentName">siswa ini</strong> dari browser. Tindakan ini tidak dapat dibatalkan dari halaman ini.</p><div class="modal-actions"><button class="btn btn-secondary" type="button" data-modal-close>Batal</button><button id="confirmDelete" class="btn btn-danger" type="button"><span class="material-symbols-rounded" style="font-size:17px">delete</span> Ya, hapus</button></div></div></div>
+</section>
+    <footer class="footer"><span>© 2026 <strong>SIAKAD Sekolah</strong> · Proyek Pemrograman Web 2</span><span>Versi demo 1.0.0 · Client-side only</span></footer>
+  </main>
+</div>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/students.js"></script>
+</body>
+</html>

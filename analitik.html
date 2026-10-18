@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rekap & Analitik | SIAKAD Sekolah</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" aria-label="Navigasi utama">
+    <div class="sidebar-brand">
+      <a href="dashboard.html" class="brand">
+        <span class="brand-mark"><span class="material-symbols-rounded">school</span></span>
+        <span>SIAKAD<span class="brand-sub">SEKOLAH</span></span>
+      </a>
+      <p class="school-caption">Sistem Informasi Akademik</p>
+    </div>
+
+    <nav class="side-nav">
+      <p class="nav-section-label">MENU UTAMA</p>
+      <a class="nav-link" href="pages/dashboard.html"><span class="material-symbols-rounded">dashboard</span><span>Dashboard</span></a>
+      <a class="nav-link" href="data-master.html"><span class="material-symbols-rounded">groups</span><span>Data Master Siswa</span></a>
+      <a class="nav-link" href="form.html"><span class="material-symbols-rounded">person_add</span><span>Tambah Siswa</span></a>
+      <a class="nav-link" href="laporan.html"><span class="material-symbols-rounded">summarize</span><span>Laporan Akademik</span></a>
+
+      <p class="nav-section-label" style="margin-top:25px">PREFERENSI</p>
+      <a class="nav-link active" href="analitik.html"><span class="material-symbols-rounded">analytics</span><span>Rekap & Analitik</span></a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="support-card">
+        <strong>Mode demonstrasi</strong>
+        <p>Data disimpan lokal pada browser ini. Tidak terhubung ke server.</p>
+        <a class="btn btn-secondary" href="../README.md" target="_blank" rel="noopener">Panduan proyek</a>
+      </div>
+      <button class="nav-link nav-logout" type="button" data-logout>
+        <span class="material-symbols-rounded">logout</span><span>Keluar dari akun</span>
+      </button>
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay"></div>
+
+  <main class="main-area">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-label="Buka menu">
+          <span class="material-symbols-rounded">menu</span>
+        </button>
+        <div class="page-location"><span>Admin</span><span>›</span><strong>Rekap & Analitik</strong></div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-date"><span class="material-symbols-rounded">calendar_today</span><span data-today></span></div>
+        <button class="icon-button" type="button" aria-label="Notifikasi"><span class="material-symbols-rounded">notifications</span></button>
+        <div class="profile-area">
+          <div class="profile-avatar">AD</div>
+          <div class="profile-meta"><strong data-admin-name>Administrator</strong><span>Admin Sekolah</span></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">STATISTIK AKADEMIK</p>
+          <h1>Rekap & Analitik</h1>
+          <p>Ringkasan data siswa berdasarkan kelas dan status.</p>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><span class="material-symbols-rounded">groups</span></div>
+          <div><p>Total Siswa</p><h2 id="totalSiswa">0</h2></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><span class="material-symbols-rounded">how_to_reg</span></div>
+          <div><p>Siswa Aktif</p><h2 id="siswaAktif">0</h2></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><span class="material-symbols-rounded">school</span></div>
+          <div><p>Rata-rata Nilai</p><h2 id="rataNilai">0</h2></div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:24px">
+        <div class="card-header">
+          <div><h2 class="card-title">Rekap Siswa per Kelas</h2><p class="card-subtitle">Jumlah siswa di setiap kelas.</p></div>
+        </div>
+        <div class="card-body">
+          <div id="rekapKelas" style="display:grid;gap:16px">
+            Memuat data siswa...
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:24px">
+        <div class="card-header">
+          <div><h2 class="card-title">Distribusi Status Siswa</h2><p class="card-subtitle">Perbandingan siswa aktif dan nonaktif.</p></div>
+        </div>
+        <div class="card-body">
+          <div id="rekapStatus">Memuat data siswa...</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© 2026 <strong>SIAKAD Sekolah</strong> · Proyek Pemrograman Web 2</span>
+      <span>Versi demo 1.0.0 · Client-side only</span>
+    </footer>
+  </main>
+</div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/analitik.js"></script>
+</body>
+</html>

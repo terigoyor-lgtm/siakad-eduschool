@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#315fbd" />
+  <title>Template Layout | SIAKAD Sekolah</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" aria-label="Navigasi utama">
+    <div class="sidebar-brand">
+      <a href="dashboard.html" class="brand"><span class="brand-mark"><span class="material-symbols-rounded">school</span></span><span>SIAKAD<span class="brand-sub">SEKOLAH</span></span></a>
+      <p class="school-caption">Sistem Informasi Akademik</p>
+    </div>
+    <nav class="side-nav">
+      <p class="nav-section-label">MENU UTAMA</p>
+      <a class="nav-link" href="dashboard.html"><span class="material-symbols-rounded">dashboard</span><span>Dashboard</span></a>
+<a class="nav-link" href="data-master.html"><span class="material-symbols-rounded">groups</span><span>Data Master Siswa</span></a>
+<a class="nav-link" href="form.html"><span class="material-symbols-rounded">person_add</span><span>Tambah Siswa</span></a>
+<a class="nav-link" href="laporan.html"><span class="material-symbols-rounded">summarize</span><span>Laporan Akademik</span></a>
+      <p class="nav-section-label" style="margin-top:25px">PREFERENSI</p>
+      <a class="nav-link" href="../analitik.html"><span class="material-symbols-rounded">analytics</span><span>Rekap & Analitik</span></a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="support-card"><strong>Mode demonstrasi</strong><p>Data disimpan lokal pada browser ini. Tidak terhubung ke server.</p><a class="btn btn-secondary" href="../README.md" target="_blank" rel="noopener">Panduan proyek <span class="material-symbols-rounded" style="font-size:15px">open_in_new</span></a></div>
+      <button class="nav-link nav-logout" type="button" data-logout><span class="material-symbols-rounded">logout</span><span>Keluar dari akun</span></button>
+    </div>
+  </aside>
+  <div class="sidebar-overlay"></div>
+  <main class="main-area">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-label="Buka menu"><span class="material-symbols-rounded">menu</span></button>
+        <div class="page-location"><span>Admin</span><span class="material-symbols-rounded" style="font-size:14px">chevron_right</span><strong>Template Layout</strong></div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-date"><span class="material-symbols-rounded">calendar_today</span><span data-today></span></div>
+        <button class="icon-button" type="button" aria-label="Notifikasi" title="Notifikasi demo"><span class="material-symbols-rounded">notifications</span></button>
+        <div class="profile-area"><div class="profile-avatar">AD</div><div class="profile-meta"><strong data-admin-name>Administrator</strong><span>Admin Sekolah</span></div><span class="material-symbols-rounded" style="font-size:17px;color:#8792a4">expand_more</span></div>
+      </div>
+    </header>
+    <section class="content">
+<div class="page-heading"><div><p class="eyebrow">TEMPLATE LAYOUT</p><h1>Template Admin Panel</h1><p>Halaman acuan untuk struktur Sidebar, Header, Content Area, dan Footer.</p></div></div>
+<div class="card"><div class="card-header"><div><h2 class="card-title">Struktur layout dasar</h2><p class="card-subtitle">Gunakan kerangka ini sebagai titik awal untuk halaman modul baru.</p></div></div><div class="card-body"><ol style="padding-left:20px;color:#637086;font-size:12px;line-height:2.1"><li>Sidebar: logo aplikasi dan navigasi.</li><li>Header: breadcrumb, tanggal, notifikasi, profil admin.</li><li>Content Area: judul halaman, ringkasan, tabel atau formulir.</li><li>Footer: identitas proyek dan versi demo.</li><li>CSS responsive: breakpoint tablet dan mobile sudah disediakan.</li></ol><a class="btn btn-primary" href="dashboard.html">Kembali ke Dashboard</a></div></div>
+</section>
+    <footer class="footer"><span>© 2026 <strong>SIAKAD Sekolah</strong> · Proyek Pemrograman Web 2</span><span>Versi demo 1.0.0 · Client-side only</span></footer>
+  </main>
+</div>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/common.js"></script>
+
+</body>
+</html>
