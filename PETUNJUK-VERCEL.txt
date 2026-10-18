@@ -1,0 +1,18 @@
+PERBAIKAN PROYEK SIAKAD - VERCEL
+
+Struktur proyek ini sudah disiapkan dengan index.html di root, CSS di assets/css/style.css, JavaScript di assets/js/, dan halaman admin di pages/.
+
+AKUN DEMO
+Username: admin
+Password: admin123
+
+AGAR WEBSITE VERCEL MENAMPILKAN DESAIN CSS:
+1. Ekstrak ZIP ini di komputer.
+2. Buka repositori https://github.com/terigoyor-lgtm/siakad-eduschool
+3. Pilih Add file > Upload files.
+4. Unggah folder assets dan pages beserta isinya ke root repositori. Pastikan struktur folder tetap sama (assets/css/style.css dan assets/js/login.js; pages/dashboard.html, pages/data-master.html, pages/form.html, pages/laporan.html).
+5. Jika GitHub meminta konfirmasi untuk mengganti index.html atau README.md, gunakan versi dari paket ini. File lama di root seperti style.css dan login.js boleh tetap ada; yang penting folder assets/ dan pages/ tersedia.
+6. Commit changes. Vercel akan melakukan deployment otomatis.
+7. Tunggu deployment selesai, lalu buka https://siakad-eduschool.vercel.app dan tekan Ctrl+F5.
+
+Catatan: Proyek adalah demo front-end client-side. Data disimpan di localStorage browser dan tidak menggunakan backend/database server.
